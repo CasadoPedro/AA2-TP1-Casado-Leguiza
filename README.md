@@ -40,8 +40,10 @@ El proyecto está dividido en tres partes funcionales:
 ├── /models/  
        └── gesture_classifier.h5  
 └── /img-ejecucion/  
-       └── capturas_del_funcionamiento.png
-├── requirements.txt
+       └── paper_landmarks.png   
+       └── rock_landmarks.png   
+       └── scissors_landmarks.png   
+├── requirements.txt   
 └── README.md 
 ```
 
