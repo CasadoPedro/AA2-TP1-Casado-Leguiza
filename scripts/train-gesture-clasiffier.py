@@ -1,5 +1,4 @@
 import numpy as np
-import tensorflow as tf
 from sklearn.model_selection import train_test_split
 from tensorflow.keras.layers import Dense, Input
 from tensorflow.keras.callbacks import EarlyStopping
@@ -7,12 +6,12 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.utils import to_categorical
 
 
-# Cargar los datos desde un archivo .npy
-X = np.load("../data/dataset.npy")
+# Cargar nuestro dataset
+data = np.load("../data/dataset.npy")
 # Separar el dataset en características (X) y etiquetas (y)
-y = X[:, -1]  # Última columna como etiquetas
-X = X[:, :-1]  # Resto de columnas como características
-# Codificar las etiquetas
+y = data[:, -1]
+X = data[:, :-1]
+# Codificar las etiquetas para poder usarlas en la red neuronal
 y = to_categorical(y, num_classes=len(np.unique(y)))
 # Dividir el dataset en conjunto de entrenamiento y prueba
 X_train, X_test, y_train, y_test = train_test_split(
@@ -20,14 +19,14 @@ X_train, X_test, y_train, y_test = train_test_split(
 )
 
 
-# Función para construir el modelo
+# Definimos la arquitectura de la red neuronal
 model = Sequential(
     [
         Input(shape=(42,)),
-        Dense(128, activation="relu"),  # Increased number of neurons
-        Dense(64, activation="relu"),  # Added more layers and neurons
+        Dense(128, activation="relu"),
+        Dense(64, activation="relu"),
         Dense(32, activation="relu"),
-        Dense(3, activation="softmax"),  # 3 classes: piedra, papel, tijeras
+        Dense(3, activation="softmax"),  # 3 clases: piedra, papel, tijeras
     ]
 )
 
