@@ -47,6 +47,8 @@ El proyecto está dividido en tres partes funcionales:
 
 ## 🧪 Scripts
 
+> ⚠️ **Importante:** Para que los scripts funcionen correctamente, debés ejecutarlos desde la carpeta `scripts`, ya que las rutas relativas están configuradas para partir desde esa ubicación.
+
 ### 1. `record-dataset.py`
 
 Captura imágenes desde la cámara web, detecta landmarks con MediaPipe y guarda coordenadas `x,y` de 21 puntos (42 valores) más su etiqueta (`0`: piedra, `1`: papel, `2`: tijera) en un archivo `.npy`.
