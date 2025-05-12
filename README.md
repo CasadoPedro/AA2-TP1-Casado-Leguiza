@@ -1,4 +1,4 @@
-# Clasificador de Gestos: Piedra, Papel o Tijera ✋✊✌️
+# Clasificador de Gestos: Piedra, Papel o Tijera✋✊✌️
 
 ## 📌 Descripción
 
