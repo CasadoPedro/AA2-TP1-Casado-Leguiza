@@ -15,7 +15,7 @@ if len(sys.argv) < 2:
     sys.exit(1)
 
 gesto = sys.argv[1]
-dataset_file = "../dataset/dataset.npy"  # Guardamos los datos en un archivo .npy
+dataset_file = "../data/dataset.npy"  # Guardamos los datos en un archivo .npy
 
 # Codificación de gestos
 gesto_to_label = {"piedra": 0, "papel": 1, "tijera": 2}
