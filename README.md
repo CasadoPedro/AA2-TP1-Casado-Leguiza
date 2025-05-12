@@ -2,7 +2,7 @@
 
 ## 📌 Descripción
 
-Este proyecto implementa un sistema de clasificación de gestos para el juego "Piedra, Papel o Tijeras", utilizando visión por computadora y aprendizaje automático. La detección de la mano se realiza mediante **MediaPipe**, y la clasificación se realiza con una **red neuronal densa (MLP)** entrenada sobre coordenadas de puntos clave (landmarks) de la mano.
+Este proyecto implementa un sistema de clasificación de gestos para el juego "Piedra, Papel o Tijeras", utilizando visión por computadora y aprendizaje automático. La detección de la mano se realiza mediante **MediaPipe**, y la clasificación se realiza con una **red neuronal densa** entrenada sobre coordenadas de puntos clave (landmarks) de la mano.
 
 El proyecto está dividido en tres partes funcionales:
 
