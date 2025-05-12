@@ -30,17 +30,20 @@ El proyecto está dividido en tres partes funcionales:
 
 
 ## 📁 Estructura de Archivos
-
-├── record-dataset.py
-├── train-gesture-classifier.py
-├── rock-paper-scissors.py
-├── /data/
-│ └── dataset.npy
-├── /models/
-│ └── gesture_classifier.h5
-└── /img-ejecucion/
-└── capturas_del_funcionamiento.png
-
+```
+├── /scripts/  
+    └──  record-dataset.py    
+    └──  train-gesture-classifier.py
+    └──  rock-paper-scissors.py  
+├── /data/  
+       └── dataset.npy  
+├── /models/  
+       └── gesture_classifier.h5  
+└── /img-ejecucion/  
+       └── capturas_del_funcionamiento.png
+├── requirements.txt
+└── README.md 
+```
 
 ## 🧪 Scripts
 
@@ -52,7 +55,7 @@ Captura imágenes desde la cámara web, detecta landmarks con MediaPipe y guarda
 
 ```bash
 python record-dataset.py piedra
-
+```
 
 ### 🧪 2. `train-gesture-classifier.py` — Entrenamiento del Modelo
 
@@ -79,7 +82,7 @@ Se guarda como: `../models/gesture_classifier.h5`
 
 ```bash
 python train-gesture-classifier.py
-
+```
 
 ### 🎮 3. `rock-paper-scissors.py` — Clasificador en Tiempo Real
 
@@ -98,7 +101,7 @@ Este script permite reconocer en tiempo real los gestos de "piedra", "papel" o "
 
 ```bash
 python rock-paper-scissors.py
-
+```
 
 ## ⚠️ Advertencias
 
@@ -109,5 +112,5 @@ python rock-paper-scissors.py
   ```python
   cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
   cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
-
+  ```
   Esto fue elegido porque era la resolución disponible en el entorno de desarrollo, pero puede ser ajustado según las capacidades de la cámara del usuario.
