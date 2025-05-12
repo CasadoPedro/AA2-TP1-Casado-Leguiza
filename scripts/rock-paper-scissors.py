@@ -46,7 +46,7 @@ if results.multi_hand_landmarks:
         for landmark in hand_landmarks.landmark:
             puntos.extend([landmark.x, landmark.y])  # Aplana (x, y)
 
-        puntos = np.array(puntos)  # Ahora shape = (42,)
+        puntos = np.array(puntos)  # Ahora shape = (42,) para la red neuronal
 
         # Predecir la clase de la imagen capturada
         prediccion = model.predict(np.expand_dims(puntos, axis=0))
